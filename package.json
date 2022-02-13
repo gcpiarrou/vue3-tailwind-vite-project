@@ -1,0 +1,28 @@
+{
+  "name": "vue3-tailwind-vite-project",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && npx gh-pages -d dist",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/vue-fontawesome": "^3.0.0-5",
+    "lodash": "^4.17.21",
+    "vue": "^3.2.25",
+    "vue-router": "^4.0.12",
+    "vuex": "^4.0.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.0.0",
+    "autoprefixer": "^10.4.2",
+    "gh-pages": "^3.2.3",
+    "postcss": "^8.4.6",
+    "tailwindcss": "^3.0.18",
+    "vite": "^2.7.2",
+    "vite-plugin-pwa": "^0.11.13",
+    "workbox-precaching": "^6.4.2"
+  }
+}
