@@ -1,6 +1,6 @@
 {
   "name": "vue3-tailwind-vite-project",
-  "version": "0.0.0",
+  "version": "1.0.4",
   "scripts": {
     "dev": "vite",
     "build": "vite build && npx gh-pages -d dist",
