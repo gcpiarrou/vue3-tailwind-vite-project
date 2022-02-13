@@ -13,11 +13,11 @@ const VitePWAConfig = {
   strategies: "injectManifest",
   manifest: {
     name: "PWA Test Project",
-    id: "ZarZaKos' PWA Test Project",
+    id: "Gaston Campana's PWA Test Project",
     short_name: "Test",
     theme_color: "#1f2937",
-    start_url: "/vue3-tailwind-vite-project?pwa-version=1.0.3",
-    scope: "/vue3-tailwind-vite-project/",
+    start_url: "./",
+    scope: "./",
     display: "standalone",
     background_color: "#1f2937",
     icons: [
