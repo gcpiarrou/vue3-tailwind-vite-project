@@ -1,13 +1,13 @@
 <template>
         <MainDrawer></MainDrawer>
-		<SecondaryDrawer></SecondaryDrawer>
+		<SecondaryDrawer v-if="secondaryDrawerRoutes[0].name"></SecondaryDrawer>
 		<Overlay 
             :visible="drawerIsOpen && isMobile" 
             :onClickFunction="closeDrawer"
         ></Overlay>
 </template>
 
-<script>
+<script setup>
     import { useIsMobile } from "Helpers/composables/mobile";
     import { useDrawer } from "Helpers/composables/drawer";
 
@@ -15,25 +15,8 @@
 	import SecondaryDrawer from "Components/navigation/SecondaryDrawer.vue";
     import Overlay from "Components/navigation/Overlay.vue";
 
-export default {
-    components: {
-        MainDrawer,
-        SecondaryDrawer,
-        Overlay,
-    },
-    setup(){
-        const {isMobile} = useIsMobile();
-        const { 
-            drawerIsOpen, 
-            closeDrawer, 
-        } = useDrawer();
+    const {isMobile} = useIsMobile();
+    const { drawerIsOpen, closeDrawer, secondaryDrawerRoutes }    = useDrawer();
 
-        return {
-            isMobile, 
-            drawerIsOpen, 
-            closeDrawer
-        };
-    },
-    
-}
+
 </script>

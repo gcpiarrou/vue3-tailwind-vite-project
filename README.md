@@ -18,15 +18,12 @@ This proyect was made to test:
     - The Drawer opens and close on mobile, using the hamburger button or the overlay on the background.
     - The Drawer reads the window width to determine if should be open or not.
     - The routes work fine on the main drawer.
+    - The routes work fine on the secondary drawer.
 
 ## Things that can be improved
 
     - The views on the project are very few and should be customized and expanded.
     - The colors used and the UX could be better.
-
-## Things that dont work
-
-    - The routes on the secondary drawer are not configured.
 
 ## Things that would be nice to have
 

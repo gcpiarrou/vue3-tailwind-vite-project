@@ -1,14 +1,10 @@
 {
   "name": "vue3-tailwind-vite-project",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "scripts": {
     "dev": "vite",
-<<<<<<< Updated upstream
-    "build": "vite build && npx gh-pages -d dist",
-=======
     "build": "vite build",
     "publish": "npx gh-pages -d dist",
->>>>>>> Stashed changes
     "preview": "vite preview"
   },
   "dependencies": {
@@ -29,5 +25,21 @@
     "vite": "^2.7.2",
     "vite-plugin-pwa": "^0.11.13",
     "workbox-precaching": "^6.4.2"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {
+      "vue/no-multiple-template-root": "off"
+    }
   }
 }

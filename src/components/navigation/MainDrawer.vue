@@ -4,7 +4,7 @@
         <div 
         v-show="drawerIsOpen || !isMobile"
         class="
-            fixed top-0 left-0 
+            top-0 left-0 
             flex flex-col items-center justify-between
             min-w-fit w-16 pb-4 h-full z-30
             overflow-auto
@@ -15,12 +15,9 @@
             ">
             <div>
                 <div class="w-full h-16">
-                    <Link icon="user-circle" url="/user"></Link>
+                    <Link icon="user-circle" url="/profile"></Link>
                 </div>
-                <Link icon="home" url="/"></Link>
-                <Link icon="user" url="/characters"></Link>
-                <Link icon="feather-alt" url="/tales"></Link>
-                <Link icon="desktop" url="/window-data"></Link>
+                <Link v-for="route in mainDrawerRoutes" :key="route.name" :icon="route.meta.icon" :url="route.path"></Link>
             </div>
             <div>
                 <Link icon="power-off" url="/logout"></Link>
@@ -29,21 +26,22 @@
     </transition>
 </template>
 
-<script>
-	import { defineAsyncComponent } from "vue";
-
+<script setup>
+    
     import { useIsMobile }  from "Helpers/composables/mobile";
     import { useDrawer }    from "Helpers/composables/drawer";
 
-    export default {
-        components: {
-            Link : defineAsyncComponent(() => import("Components/Navigation/Link.vue")),
-        },
-        setup(){
-            const {isMobile}        = useIsMobile();
-            const { drawerIsOpen }  = useDrawer();
+    import Link from "Components/Navigation/Link.vue";
 
-            return { isMobile, drawerIsOpen };
-        },
-    }
+    const { isMobile }                          = useIsMobile();
+    const { drawerIsOpen, mainDrawerRoutes }    = useDrawer();
+
+    
+
+
+    
+
+    
+
+
 </script>
